@@ -4,7 +4,7 @@
       <el-header id="header" height="64px">
         <img src='@/assets/zjucss.png' id="main-logo">
         <div id="title">CSS在线数据处理计算服务中心</div>
-        <a href=""><div id="tips">说明文档</div></a>
+        <!-- <a href=""><div id="tips">说明文档</div></a> -->
       </el-header>
       <el-container>
         <el-aside width="230px">
@@ -17,20 +17,24 @@
             text-color="#000"
             active-text-color="rgb(16, 78, 91)"
             id="menu">
-            <el-menu-item id="title1">
-                <i class="el-icon-monitor"></i>
-                <span slot="title">机器学习方法</span>
-            </el-menu-item>
+            <router-link to='/'>
+              <el-menu-item id="title1">
+                  <i class="el-icon-monitor"></i>
+                  <span slot="title">机器学习方法</span>
+              </el-menu-item>
+            </router-link>
             <router-link :to="'/'+item.name" v-for="item in firstList" :key="item.id">
               <el-menu-item :index="item.id">
                 <i class="el-icon-monitor"></i>
                 <span slot="title">{{item.title}}</span>
               </el-menu-item>
             </router-link>
-            <el-menu-item id="title1">
-                <i class="el-icon-document"></i>
-                <span slot="title">数据分析工具</span>
-            </el-menu-item>
+            <router-link to='/'>
+              <el-menu-item id="title1">
+                  <i class="el-icon-document"></i>
+                  <span slot="title">数据分析工具</span>
+              </el-menu-item>
+            </router-link>
             <router-link :to="'/'+item.name" v-for="item in secondList" :key="item.id">
               <el-menu-item :index="item.id">
                 <i class="el-icon-document"></i>

@@ -95,7 +95,7 @@ export default {
         return
       }
       this.flag = 0
-      window.open('http://localhost:8025' +this.$router.history.current.path + '/download/' + Math.random())
+      window.open('http://120.27.210.217:8025' +this.$router.history.current.path + '/download/' + Math.random())
       this.fileList = []
       this.input = ''
     }
@@ -104,7 +104,6 @@ export default {
 </script>
 <style lang="less" scoped>
   #container {
-    margin: -20px;
     min-height: 100%;
     position: relative;
     box-sizing: border-box;

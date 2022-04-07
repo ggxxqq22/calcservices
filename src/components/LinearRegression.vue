@@ -11,7 +11,7 @@
       :auto-upload="false">
       <el-button slot="trigger" size="large" type="primary"><i class="el-icon-paperclip"></i>选取文件</el-button>
       <el-button style="margin-left: 20px;" size="large" type="success" @click="submitUpload"><i class="el-icon-upload2"></i>上传到服务器</el-button>
-      <div slot="tip" class="el-upload__tip">请同时上传训练集和测试集，并分别命名为train.csv,test.csv</div>
+      <div slot="tip" class="el-upload__tip">请同时上传训练集和测试集，并分别命名为train.csv,test.csv，其中test.csv中请不要上传target列</div>
     </el-upload>
     <div class="download">
       <el-button size="large" type="primary" @click="submitDownload">下载文件<i class="el-icon-download"></i></el-button>
@@ -95,7 +95,7 @@ export default {
         return
       }
       this.flag = 0
-      window.open('http://localhost:8025' + this.$router.history.current.path + '/download/' + Math.random())
+      window.open('http://120.27.210.217:8025' + this.$router.history.current.path + '/download/' + Math.random())
       this.fileList = []
       this.input = ''
     }
@@ -104,7 +104,6 @@ export default {
 </script>
 <style lang="less" scoped>
   #container {
-    margin: -20px;
     min-height: 100%;
     position: relative;
     box-sizing: border-box;
