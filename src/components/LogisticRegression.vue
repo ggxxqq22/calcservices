@@ -105,9 +105,11 @@ export default {
 <style lang="less" scoped>
   #container {
     margin: -20px;
-    min-height: calc(100vh - 264px);
+    min-height: 100%;
     position: relative;
+    box-sizing: border-box;
     padding-bottom: 200px;
+    overflow: hidden;
     h2 {
       padding: 50px 60px 0;
       font-size: 24px;

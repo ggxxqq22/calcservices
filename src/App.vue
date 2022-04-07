@@ -13,7 +13,7 @@
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
-            background-color="#f5f9fa"
+            background-color="#E9EEF3"
             text-color="#000"
             active-text-color="rgb(16, 78, 91)"
             id="menu">
@@ -129,7 +129,8 @@ export default {
     }
   }
   .el-main {
-    background-color: #E9EEF3;
+    background-color: #f5f9fa;
+    min-height: calc(100vh - 64px);
     color: #333;
     padding: 0 0;
   }

@@ -13,10 +13,12 @@ import PolyData from '@/components/PloyData.vue'
 import WordCloud from '@/components/WordCloud.vue'
 import PDF2Word from '@/components/PDF2Word.vue'
 import Ttest from '@/components/Ttest.vue'
+import HomePage from '@/components/HomePage.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
+    { path: '/', redirect: '/homepage'},
     { path: '/kmeans', component: Kmeans },
     { path: '/decisionTree', component: DecisionTree },
     { path: '/randomForest', component: RandomForest },
@@ -29,7 +31,8 @@ const router = new VueRouter({
     { path: '/Ttest', component: Ttest },
     { path: '/ploydata', component: PolyData },
     { path: '/wordCloud', component: WordCloud },
-    { path: '/pdf2word', component: PDF2Word},
+    { path: '/pdf2word', component: PDF2Word },
+    { path: '/homepage', component: HomePage},
   ]
 })
 
